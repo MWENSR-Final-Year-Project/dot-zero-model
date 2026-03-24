@@ -1,0 +1,39 @@
+[project]
+name = "dot-zero-model"
+version = "0.1.0"
+description = "DotZero neural network and MCTS search"
+dependencies = [
+    "dot-zero-game @ git+https://github.com/MWENSR-Final-Year-Project/dot-zero-game.git",
+    "tensorflow>=2.15",
+    "annotated-types==0.7.0",
+    "filelock==3.19.1",
+    "fsspec==2025.10.0",
+    "Jinja2==3.1.6",
+    "MarkupSafe==3.0.3",
+    "mpmath==1.3.0",
+    "networkx==3.2.1",
+    "numpy==2.0.2",
+    "pydantic==2.12.5",
+    "pydantic_core==2.41.5",
+    "sympy==1.14.0",
+    "torch==2.8.0",
+    "typing-inspection==0.4.2",
+    "typing_extensions==4.15.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/*"]
