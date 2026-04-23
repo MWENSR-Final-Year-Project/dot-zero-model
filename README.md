@@ -56,20 +56,23 @@ tests/
 
 ## Requirements
 
-- Python 3.9+
+- Python 3.12+
+- [dot-zero-game](https://github.com/MWENSR-Final-Year-Project/dot-zero-game) — game engine and state representation
 - TensorFlow >= 2.15
-- NumPy
+- NumPy >= 1.24
+
+Dependencies are declared in `pyproject.toml` and installed automatically.
 
 ## Installation
 
 ```bash
-pip install -e .
+pip install .
 ```
 
 For development (includes pytest and pytest-cov):
 
 ```bash
-pip install -e ".[dev]"
+pip install ".[dev]"
 ```
 
 ## Running Tests
