@@ -38,28 +38,20 @@ Default hyperparameters: `board_size=5`, `channels=64`, `num_res_blocks=6`.
 src/
   network/
     model.py        # DotZeroNet and ResidualBlock (TensorFlow/Keras)
-    encoding.py     # Game state → numpy tensor (channels-last)
     augmentation.py # 8-fold symmetry augmentation for training data
-  search/
-    node.py         # MCTS tree node with PUCT statistics
-    puct.py         # PUCT search (select, expand, backup, get_policy)
 
 tests/
   network/
     augmentation/   # One test file per augmentation function
-    encoding/
     model/          # test_dot_zero_net.py, test_residual_block.py
-  search/
-    node/           # One test file per Node method
-    puct/           # One test file per PUCT method
 ```
 
 ## Requirements
 
 - Python 3.12+
 - [dot-zero-game](https://github.com/MWENSR-Final-Year-Project/dot-zero-game) — game engine and state representation
-- TensorFlow >= 2.15
-- NumPy >= 1.24
+- TensorFlow >= 2.16
+- NumPy >= 1.26, < 2.2
 
 Dependencies are declared in `pyproject.toml` and installed automatically.
 

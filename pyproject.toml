@@ -10,7 +10,7 @@ requires-python = ">=3.12"
 dependencies = [
     "dot-zero-game @ git+https://github.com/MWENSR-Final-Year-Project/dot-zero-game.git",
     "tensorflow>=2.16",
-    "numpy==2.4.3",
+    "numpy>=1.26.0,<2.2.0",
 ]
 
 [project.optional-dependencies]
